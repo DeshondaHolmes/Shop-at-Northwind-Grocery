@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northwind Grocery - Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Icon</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products-search.html">Products</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <h1 class=" border text-center">Products Search</h1>
+    <div class="border container">
+
+      <div id="productSearchSelection" class="row">
+        <div class="col">
+          <label for="productsSearch">Search by:</label>
+          <select id="productsSearch">
+            <option value="">Select one...</option>
+            <option value="Search by category">Search by category</option>
+            <option value="View all">View all</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- products category select dropdown -->
+    <div id="categorySelectionRow" class="row">
+
+      <div class="col">
+          <label for="categorySelect">Select a category:</label>
+          <select id="categorySelect">
+            <option value="">Select one...</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Confections">Confections</option>
+            <option value="Grains/Cereals">Grains/Cereals</option>
+            <option value="Produce">Produce</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Meat/Poultry">Meat/Poultry</option>
+            <option value="Dairy Products">Dairy Products</option>
+            <option value="Condiments">Condiments</option>
+          </select>
+      </div>
+
+  </div>
+
+    <form id="productsViewAllTable">
+      <div class=" border row">
+        <div class="col-9 border">
+
+          <table id="ViewAllTable">
+            <tr>
+         
+              <th>Product Id:</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Link</th>
+            </tr>
+
+            <tbody id="viewAllProductsSearchDetails">
+
+
+            </tbody>
+
+          </table>
+
+        </div>
+      </div>
+    </form>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="scripts/products-search.js"></script>
+</body>
+
+</html>
