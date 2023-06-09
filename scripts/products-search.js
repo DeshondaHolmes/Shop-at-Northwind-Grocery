@@ -28,7 +28,7 @@ function onSearchChange() {
 
     let selectedOption = productsSearchSelect.value;
 
- 
+
     console.log(selectedOption);
 
     if (selectedOption.includes("View all")) {
@@ -36,16 +36,14 @@ function onSearchChange() {
         categorySelectionRow.style.display = "none";
 
         // viewAllProductsTable.innerHTML = "";
-        
+
     } else {
         viewAllProductsTable.style.display = "none";
-        
-    } 
+
+    }
     if (selectedOption.includes("Search by category")) {
         categorySelectionRow.style.display = "block";
         table.innerHTML = "";
-    
-        
         categorySelect.selectedIndex = 0;
 
     }
@@ -74,6 +72,20 @@ function onCategorySelectChange() {
     let selectedCategory = categorySelect.value;
     console.log(selectedCategory);
 
+    if (selectedCategory.checked) {
+        categorySelectionRow.style.display = "block";
+        viewAllProductsTable.style.display = "none";
+
+        // viewAllProductsTable.innerHTML = "";
+
+    } else {
+        // viewAllProductsTable.style.display = "none";
+        categorySelect.selectedIndex = 0;
+        table.innerHTML = "";
+
+    }
+
+
     // let id= -1;
     let theUrl = `http://localhost:8081/api/categories/${selectedCategory}`;
     console.log(theUrl);
@@ -85,9 +97,6 @@ function onCategorySelectChange() {
             buildCategoryTable(products);
 
         });
-
-
-
 
 }
 
@@ -133,8 +142,6 @@ function buildViewAllProductsTable(products) {
 function buildCategoryTable(products) {
 
     for (let product of products) {
-
-
 
         //define row to be inside table body for each course
         let row = table.insertRow(-1);

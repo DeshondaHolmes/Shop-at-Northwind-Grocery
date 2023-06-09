@@ -1,18 +1,34 @@
-.card{
+body {
+    background-image: url("/images/groceries.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+
+}
+
+
+
+
+.card {
     display: flex;
     justify-content: space-evenly;
     align-content: space-evenly;
     text-align: center;
     margin-bottom: 5%;
-    background: linear-gradient(  rgba(168, 183, 12, 0.631),rgba(114, 114, 57, 0.881));
-    font-size: medium;
+    background: linear-gradient(rgba(32, 86, 203, 0.631), rgba(46, 80, 154, 0.638));
+    font-size: x-large;
+    font-weight: bolder;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+
+
+nav {
+    background: linear-gradient(rgba(92, 185, 143, 0.459), rgba(29, 81, 136, 0.881));
+    font-size: larger;
     font-weight: 700;
 
 }
-
-
-
-#viewAllTable,#categorySelectionRow{
-    display:none;
-}
-
