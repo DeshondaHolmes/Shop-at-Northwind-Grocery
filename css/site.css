@@ -1,6 +1,18 @@
 nav {
-    background: linear-gradient(rgba(92, 185, 143, 0.459), rgba(29, 81, 136, 0.881));
-    font-size: larger;
-    font-weight: 700;
+    background: linear-gradient(rgba(27, 49, 39, 0.299), rgba(9, 73, 16, 0.39),rgba(101, 18, 46, 0.171),white,white);
+    font-size: xx-large;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+}
+
+
+h1 {
+
+    font-size: 50px;
+  
+    -webkit-text-fill-color: rgba(15, 28, 13, 0.727);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 }

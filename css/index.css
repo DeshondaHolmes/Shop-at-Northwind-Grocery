@@ -1,9 +1,9 @@
-body {
+#productsBackground{
     background-image: url("/images/groceries.jpg");
-
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
+   
 
 }
 
@@ -12,23 +12,15 @@ body {
 
 .card {
     display: flex;
-    justify-content: space-evenly;
-    align-content: space-evenly;
+    color:rgb(4, 1, 1);
     text-align: center;
-    margin-bottom: 5%;
-    background: linear-gradient(rgba(32, 86, 203, 0.631), rgba(46, 80, 154, 0.638));
+    margin-bottom: 3%;
+    background: conic-gradient(rgba(82, 92, 113, 0.99), rgba(196, 220, 76, 0.561),rgba(255, 192, 203, 0.364),rgba(186, 186, 224, 0.349));
     font-size: x-large;
-    font-weight: bolder;
-    width: fit-content;
-    height: fit-content;
-
+    font-weight: bold;
+    margin-top: 8%;
 }
 
-
-
-nav {
-    background: linear-gradient(rgba(92, 185, 143, 0.459), rgba(29, 81, 136, 0.881));
-    font-size: larger;
-    font-weight: 700;
-
-}
+.card-title{
+    color:rgb(1, 8, 20);
+  
