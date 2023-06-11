@@ -14,9 +14,10 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Icon</a>
+        <a class="navbar-brand" href="index.html"><img src="images/grocerybag.svg" alt="Grocery Bag" width="45" height="50
+          ">Northwind</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,15 +34,22 @@
         </div>
       </div>
     </nav>
-
   </header>
 
   <main>
-    <h1 class=" border text-center">Products Search</h1>
-    <div class="border container">
-
+    <div class=" container">
       <div class="row">
-        <div class="col">
+        <div class="col-md-12 text-center">
+          <h2 class="mt-md-5 mb-5">Products in stock</h2>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-12">
           <label for="productsSearchSelect">Search by:</label>
           <select id="productsSearchSelect">
             <option value="">Select one...</option>
@@ -51,42 +59,46 @@
         </div>
       </div>
     </div>
-
-
     <!-- products category select dropdown -->
-    <div id="categorySelectionRow" class="row">
 
-      <div class="col">
-        <label for="categorySelect">Select a category:</label>
-        <select id="categorySelect">
-          <option value="">Select one...</option>
-          <option value="1">Beverages</option>
-          <option value="2">Confections</option>
-          <option value="3">Grains/Cereals</option>
-          <option value="4">Produce</option>
-          <option value="5">Seafood</option>
-          <option value="6">Meat/Poultry</option>
-          <option value="7">Dairy Products</option>
-          <option value="8">Condiments</option>
-        </select>
+    <div class="container">
+      <div id="categorySelectionRow" class="row">
+  
+        <div class="col-6">
+          <label for="categorySelect">Select a category:</label>
+          <select id="categorySelect">
+            <option value="">Select one...</option>
+            <option value="1">Beverages</option>
+            <option value="2">Confections</option>
+            <option value="3">Grains/Cereals</option>
+            <option value="4">Produce</option>
+            <option value="5">Seafood</option>
+            <option value="6">Meat/Poultry</option>
+            <option value="7">Dairy Products</option>
+            <option value="8">Condiments</option>
+          </select>
+        </div>
       </div>
     </div>
 
-    <form id="productsViewAllTable">
-      <div class=" border row">
-        <div class="col-9 border">
 
-          <table id="viewAllTable">
-            <thead>
+    <form id="viewAllTable" class="container">
+      <div class=" row">
+        <div class="col">
+
+          <table class="text-center">
+            <thead id="tableHeader">
 
               <tr>
-
+                <th>Product ID</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>More info</th>
               </tr>
 
             </thead>
 
             <tbody id="viewAllProducts">
-
 
             </tbody>
 
@@ -95,15 +107,21 @@
         </div>
       </div>
     </form>
-    <form id="productCategory">
-      <div class=" border row">
-        <div class="col-9 border">
+
+
+
+    <form id="productCategory" class="container">
+      <div class="row">
+        <div class="col-6">
 
           <table id="categoryTable">
             <thead>
 
               <tr>
-
+             
+                <th>Product name</th>
+                <th>Supplier</th>
+                <th>Category ID</th>
               </tr>
 
             </thead>

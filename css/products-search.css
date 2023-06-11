@@ -1,5 +1,16 @@
-
 #viewAllTable,
-#categorySelectionRow {
+#categorySelectionRow,#categoryTable {
     display: none;
 }
+
+table {
+    background:linear-gradient(rgba(188, 179, 176, 0.271),rgba(152, 144, 144, 0.501),rgba(0, 128, 0, 0.447),rgba(255, 255, 0, 0.294));
+   
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+
