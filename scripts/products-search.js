@@ -4,7 +4,7 @@ const tbody = document.getElementById("viewAllProducts");
 
 const productsSearchSelect = document.getElementById("productsSearchSelect");
 
-const viewAllProductsTable = document.getElementById("viewAllTable");
+const viewAllTable = document.getElementById("viewAllTable");
 
 const categorySelectionRow = document.getElementById("categorySelectionRow");
 
@@ -14,7 +14,7 @@ const table = document.getElementById("foodCategoryTable");
 
 const categoryTable = document.getElementById("categoryTable");
 
-
+const productCategory = document.getElementById("productCategory");
 
 window.onload = () => {
     console.log("First on load");
@@ -34,17 +34,27 @@ function onSearchChange() {
     console.log(selectedOption);
 
     if (selectedOption.includes("View all")) {
-        viewAllProductsTable.style.display = "block";
+        viewAllTable.style.display = "block";
+        productCategory.style.display = "none"
         categorySelectionRow.style.display = "none";
-        productsSearchSelect.selectedIndex = 0;
-    } else {
-        viewAllProductsTable.style.display = "none";
-        categoryTable.style.display = "none";
-    }
-    if (selectedOption.includes("Search by category")) {
+        tbody.innerHTML = "";
+
+    } else if (selectedOption.includes("Search by category")){
         categorySelectionRow.style.display = "block";
+        viewAllTable.style.display = "none";
+        productCategory.style.display = "block";
+        table.innerHTML = "";
+        categorySelect.selectedIndex = 0;
+
+
     } else {
+        viewAllTable.style.display = "none";
         categorySelectionRow.style.display = "none";
+       
+        categoryTable.style.display = "none";
+        categorySelect.selectedIndex = 0;
+        table.innerHTML = "";
+
     }
 
     console.log("second console this is view all change function");
@@ -64,20 +74,21 @@ function onSearchChange() {
             }
         });
 }
-
 function onCategorySelectChange() {
     let selectedCategory = categorySelect.value;
     console.log(selectedCategory);
 
-    if (selectedCategory > 0) {
-        categorySelectionRow.style.display = "block";
-        // categorySelect.innerHTML = "";
-        categoryTable.style.display = "block";
-        
-    } else {
-        categoryTable.style.display = "block";
-        // categorySelect.selectedIndex= 0;
+    if (selectedCategory) {
 
+        categoryTable.style.display = "block";
+      
+        
+        table.innerHTML = "";
+    }
+    else {
+        categoryTable.style.display= "none";
+        table.style.display = "none"
+        
     }
 
 
