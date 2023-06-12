@@ -23,7 +23,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-1 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
@@ -37,19 +37,19 @@
   </header>
 
   <main>
-    <div class=" container">
+    <div class=" container-fluid border" id = "productBackgroundHero">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1 class="mt-md-5 mb-5 ">Products in stock</h4>
+          <h1 class="mt-md-1 mb-5 " id = "heroSection">Products in stock</h4>
         </div>
       </div>
     </div>
 
 
-    <div class="container" id = "productSearchDropDown">
-      <div class="container mb-5">
+    <div class="container" id = "productsDropdown">
+      <div class="container mb-2">
         <div class="row">
-          <div class="col-12">
+          <div class="col-6">
             <label for="productsSearchSelect">Search by:</label>
             <select id="productsSearchSelect">
               <option value="">Select one...</option>
@@ -88,7 +88,7 @@
 
     <div class="container">
 
-      <form id="viewAllTable" class="container">
+      <form id="viewAllTable" class="container-flex">
         <div class=" row">
           <div class="col">
   
@@ -114,32 +114,37 @@
         </div>
       </form>
 
-      <form id="productCategory" class="container">
-        <div class="row">
-          <div class="col">
-  
-            <table class="col-md-12 text-center">
-              <thead id="categoryTable">
-  
-                <tr>
-  
-                  <th>Product name</th>
-                  <th>Supplier</th>
-                  <th>Category ID</th>
-                </tr>
-  
-              </thead>
-  
-              <tbody id="foodCategoryTable">
-  
-  
-              </tbody>
-  
-            </table>
-  
+
+      <div class="container">
+
+        <form id="productCategory" class="container-flex">
+          <div class="row">
+            <div class="col">
+    
+              <table class="col-md-12 text-center">
+                <thead id="categoryTable">
+    
+                  <tr>
+    
+                    <th>Product name</th>
+                    <th>Supplier</th>
+                    <th>Category ID</th>
+                  </tr>
+    
+                </thead>
+    
+                <tbody id="foodCategoryTable">
+    
+    
+                </tbody>
+    
+              </table>
+    
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+
+      </div>
 
 
 

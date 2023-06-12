@@ -4,7 +4,7 @@
 }
 
 table {
-    background:conic-gradient(rgba(201, 28, 74, 0.348),rgba(28, 148, 70, 0.781),rgba(145, 166, 167, 0.821),rgba(190, 190, 35, 0.913));
+    background:radial-gradient(rgba(201, 28, 74, 0.348),rgba(28, 148, 70, 0.781),rgba(145, 166, 167, 0.821),rgba(190, 190, 35, 0.913));
    
 }
 
@@ -13,19 +13,16 @@ form{
     justify-content:end;
 }
 
-main{
-    
+#productBackgroundHero{
+    size: 100%;
     background-image: url("/images/products\ background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
+
 }
 
 
-h1 {
-
-    font-size: 50px;
-    -webkit-text-fill-color: rgb(0, 0, 0);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-
+#heroSection{
+    padding:5%;
 }
