@@ -136,7 +136,7 @@ function buildViewAllProductsTable(products) {
 
 
     let anchor = document.createElement("a");
-    anchor.href = `details.html?categoryid=${products.categoryId}`;
+    anchor.href = `details.html?productid=${products.productId}`;
     anchor.text = "See details";
 
     // anchor.className = "";

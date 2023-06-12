@@ -40,102 +40,113 @@
     <div class=" container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h2 class="mt-md-5 mb-5">Products in stock</h2>
+          <h1 class="mt-md-5 mb-5 ">Products in stock</h4>
         </div>
       </div>
     </div>
 
 
-
-    <div class="container mb-5">
-      <div class="row">
-        <div class="col-12">
-          <label for="productsSearchSelect">Search by:</label>
-          <select id="productsSearchSelect">
-            <option value="">Select one...</option>
-            <option value="Search by category">Search by category</option>
-            <option value="View all">View all</option>
-          </select>
+    <div class="container" id = "productSearchDropDown">
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-12">
+            <label for="productsSearchSelect">Search by:</label>
+            <select id="productsSearchSelect">
+              <option value="">Select one...</option>
+              <option value="Search by category">Search by category</option>
+              <option value="View all">View all</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- products category select dropdown -->
+      <!-- products category select dropdown -->
 
-    <div class="container"  id="categorySelectionRow">
-      <div class="row">
+
+      <div class="container" id="categorySelectionRow">
+        <div class="row">
+
+          <div class="col-6">
+            <label for="categorySelect">Select a category:</label>
+            <select id="categorySelect">
+              <option value="">Select one...</option>
+              <option value="1">Beverages</option>
+              <option value="2">Confections</option>
+              <option value="3">Grains/Cereals</option>
+              <option value="4">Produce</option>
+              <option value="5">Seafood</option>
+              <option value="6">Meat/Poultry</option>
+              <option value="7">Dairy Products</option>
+              <option value="8">Condiments</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="container">
+
+      <form id="viewAllTable" class="container">
+        <div class=" row">
+          <div class="col">
   
-        <div class="col-6">
-          <label for="categorySelect">Select a category:</label>
-          <select id="categorySelect">
-            <option value="">Select one...</option>
-            <option value="1">Beverages</option>
-            <option value="2">Confections</option>
-            <option value="3">Grains/Cereals</option>
-            <option value="4">Produce</option>
-            <option value="5">Seafood</option>
-            <option value="6">Meat/Poultry</option>
-            <option value="7">Dairy Products</option>
-            <option value="8">Condiments</option>
-          </select>
+            <table class="col-md-12 text-center">
+              <thead id="tableHeader">
+  
+                <tr>
+                  <th>Product ID</th>
+                  <th>Product name</th>
+                  <th>Price</th>
+                  <th>More info</th>
+                </tr>
+  
+              </thead>
+  
+              <tbody id="viewAllProducts">
+  
+              </tbody>
+  
+            </table>
+  
+          </div>
         </div>
-      </div>
+      </form>
+
+      <form id="productCategory" class="container">
+        <div class="row">
+          <div class="col">
+  
+            <table class="col-md-12 text-center">
+              <thead id="categoryTable">
+  
+                <tr>
+  
+                  <th>Product name</th>
+                  <th>Supplier</th>
+                  <th>Category ID</th>
+                </tr>
+  
+              </thead>
+  
+              <tbody id="foodCategoryTable">
+  
+  
+              </tbody>
+  
+            </table>
+  
+          </div>
+        </div>
+      </form>
+
+
+
     </div>
 
 
-    <form id="viewAllTable" class="container">
-      <div class=" row">
-        <div class="col">
 
-          <table class="text-center">
-            <thead id="tableHeader">
-
-              <tr>
-                <th>Product ID</th>
-                <th>Product name</th>
-                <th>Price</th>
-                <th>More info</th>
-              </tr>
-
-            </thead>
-
-            <tbody id="viewAllProducts">
-
-            </tbody>
-
-          </table>
-
-        </div>
-      </div>
-    </form>
-
-
-
-    <form id="productCategory" class="container">
-      <div class="row">
-        <div class="col">
-
-          <table id="categoryTable">
-            <thead>
-
-              <tr>
-             
-                <th>Product name</th>
-                <th>Supplier</th>
-                <th>Category ID</th>
-              </tr>
-
-            </thead>
-
-            <tbody id="foodCategoryTable">
-
-
-            </tbody>
-
-          </table>
-
-        </div>
-      </div>
-    </form>
   </main>
 
 

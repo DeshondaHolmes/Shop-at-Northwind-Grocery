@@ -1,11 +1,12 @@
-// // location.search is the way you access
-//  // the query string portion of the URL
+
 
 "use strict";
 
 
 //tbody element defined by html element id 
 const groceryCard = document.getElementById("groceryCard");
+
+
 
 const productCard = document.getElementById("productCard");
 
@@ -23,14 +24,15 @@ window.onload = () => {
     let urlParams = new URLSearchParams(location.search);
     console.log(urlParams);
 
-    let id = -1;
-    if (urlParams.has("categoryid") === true) {
+    let id = 0;
+
+    if (urlParams.has("productid") === true) {
         document.getElementById("error").innerHTML = "";
-        id = urlParams.get("categoryid")
+        id = urlParams.get("productid")
         console.log(id);
 
-        let categoryIdUrl = "http://localhost:8081/api/products/" + id;
-        fetch(categoryIdUrl)
+        let productIdUrl = "http://localhost:8081/api/products/" + id;
+        fetch(productIdUrl)
             .then((response) => response.json())
             .then(product => {
                 console.log(product);
@@ -40,16 +42,14 @@ window.onload = () => {
      
     }
     else {
-        document.getElementById("error").innerHTML = "Oh no! there's no querystring... you should get to this page through a hyperlink."
+        document.getElementById("error").innerHTML = "Please click upper left shopping bag to go home.";
     }
 
 }
 
 function showDetailforProductCard(product) {
-    // fill in html elements to describe the course that was passed in.
-
-
-
+    
+    //build card displaying info
     let divCard = document.createElement("div");
     divCard.className = "card";
     productCard.appendChild(divCard);
